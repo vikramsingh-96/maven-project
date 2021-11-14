@@ -1,0 +1,22 @@
+pipeline {
+agent any
+
+tools{
+    maven '3.5.2'
+    java '1.8.0'
+}
+
+stages{
+    stage('Initialize') {  
+        steps{
+            git branch: 'master', url: 'https://github.com/vikramsingh-96/maven-project.git'
+        }
+    }
+    stage('Build'){
+        steps{
+            sh 'mvn -B package'
+        }
+
+    }
+}
+}
