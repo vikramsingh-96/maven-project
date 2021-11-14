@@ -3,7 +3,7 @@ agent any
 
 tools{
     maven 'Maven_Home'
-    jdk '1.8.0'
+    jdk 'Home_JAVA'
 }
 
 stages{
